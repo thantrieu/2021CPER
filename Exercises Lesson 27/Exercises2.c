@@ -10,7 +10,7 @@
  * @author Branium Academy
  */
 
-// hàm nhập ma trận
+ // hàm nhập ma trận
 void fillMatrix(int matrix[][50], int m, int n);
 
 // hàm hiển thị ma trận
@@ -38,7 +38,12 @@ int main() {
 		maxValueInRow(matrix, m, n);
 		// tìm giá trị lẻ nhỏ nhất trong ma trận
 		int minOdd = minOddValue(matrix, m, n);
-		printf("Gia tri le nho nhat trong ma tran: %d", minOdd);
+		if (minOdd % 2 != 0) {
+			printf("Gia tri le nho nhat trong ma tran: %d", minOdd);
+		}
+		else {
+			printf("Khong ton tai gia tri le nho nhat.\n");
+		}
 	}
 	else {
 		puts("Nhap m, n > 0");
@@ -82,7 +87,15 @@ void maxValueInRow(int matrix[][50], int m, int n) {
 
 int minOddValue(int matrix[][50], int m, int n) {
 	int i, j;
-	int min = matrix[0][0];
+	int min = 0; // giả định ban đầu không có số lẻ trong ma trận
+	for (i = 0; i < m; i++) {
+		for (j = 0; j < n; j++) {
+			if (matrix[i][j] % 2 != 0) {
+				min = matrix[i][j];
+				break;
+			}
+		}
+	}
 	// duyệt từng phần tử xem phần tử nào nhỏ nhất
 	for (i = 0; i < m; i++) {
 		for (j = 0; j < n; j++) {
