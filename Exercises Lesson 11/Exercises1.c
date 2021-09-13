@@ -1,4 +1,4 @@
-﻿// Nhập số tự nhiên n sau đó hiển thị các số chẵn
+// Nhập số tự nhiên n sau đó hiển thị các số chẵn
 // trong đoạn [0, n]
 #include <stdio.h>
 /*
