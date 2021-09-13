@@ -12,9 +12,9 @@ int main() {
 	// điều kiện tạo thành tam giác là tổng hai cạnh bất kì
 	// luôn lớn hơn cạnh còn lại
 	if ((a + b > c) && (b + c > a) && (a + c > b)) {
-		puts("Lap thanh ba canh tam giac.");
+		puts("YES");
 	}
 	else {
-		puts("Khong lap thanh ba canh tam giac.");
+		puts("NO");
 	}
 }

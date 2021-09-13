@@ -9,12 +9,12 @@ int main() {
 	scanf("%d", &n);
 	// kiểm tra:
 	if (n < 0) {
-		printf("%d la so am.\n", n);
+		printf("NEGATIVE");
 	}
 	else if (n == 0) {
-		printf("%d la so khong am khong duong.\n", n);
+		printf("UNSIGNED\n");
 	}
 	else {
-		printf("%d la so duong.\n", n);
+		printf("POSITIVE.\n");
 	}
 }

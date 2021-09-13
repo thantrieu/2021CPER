@@ -13,28 +13,28 @@ int main() {
 	if (a == 0) {
 		// TH1: nếu b = 0, c # 0 thì phương trình không có nghiệm
 		if (b == 0 && c != 0) {
-			puts("Phuong trinh khong co nghiem.");
+			puts("NO SOLUTION");
 		}
 		// TH2: nếu b = 0, c = 0 thì phương trình vô số nghiệm
 		else if (b == 0 && c == 0) {
-			puts("Phuong trinh co vo so nghiem.");
+			puts("COUNTERLESS SOLUTION");
 		}
 		// TH3: phương trình có 1 nghiệm x = -b / a
 		else {
 			double x = -c / b; // nghiệm phương trình
-			printf("Nghiem phuong trinh la: x = %lf\n", x);
+			printf("%lf\n", x);
 		}
 	}
 	else { // ngược lại, giải phương trình bậc 2
 		double delta = b * b - 4 * a * c; // tính delta
 		// TH1: delta < 0
 		if (delta < 0) { // phương trình vô nghiệm
-			puts("Phuong trinh vo nghiem");
+			puts("NO SOLUTION");
 		}
 		// TH2: delta = 0
 		else if (delta == 0) { // phương trình có nghiệm kép
 			double x = -b / (2 * a);
-			printf("Phuong trinh co nghiem kep la x1, x2 = %lf\n", x);
+			printf("%lf\n", x);
 		}
 		// TH3: delta > 0
 		else {
@@ -42,7 +42,7 @@ int main() {
 			x1 = (-b - sqrt(delta)) / (2 * a);
 			x2 = (-b + sqrt(delta)) / (2 * a);
 			// kết luận
-			printf("Nghiem phuong trinh la:\nx1 = %lf\nx2 = %lf\n", x1, x2);
+			printf("%lf, %lf\n", x1, x2);
 		}
 	}
 }

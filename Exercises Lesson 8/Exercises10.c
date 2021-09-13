@@ -9,22 +9,26 @@ int main() {
 	puts("Nhap diem: ");
 	scanf("%f", &score);
 
-	char rank;
-	if (score >= 9.0f) { // >= 9.0
-		rank = 'A';
+	if (score > 10 || score < 0) {
+		printf("INVALID\n");
 	}
-	else if (score >= 7.0f) { // 7.0 <= score < 9
-		rank = 'B';
+	else {
+		char rank;
+		if (score >= 9.0f) { // >= 9.0
+			rank = 'A';
+		}
+		else if (score >= 7.0f) { // 7.0 <= score < 9
+			rank = 'B';
+		}
+		else if (score >= 5.0f) { // 5.0 <= score < 7
+			rank = 'C';
+		}
+		else if (score >= 4.0f) { // 4.0 <= score < 5
+			rank = 'D';
+		}
+		else { // còn lại là dưới 4.0
+			rank = 'F';
+		}
+		printf("%c\n", rank);
 	}
-	else if (score >= 5.0f) { // 5.0 <= score < 7
-		rank = 'C';
-	}
-	else if (score >= 4.0f) { // 4.0 <= score < 5
-		rank = 'D';
-	}
-	else { // còn lại là dưới 4.0
-		rank = 'F';
-	}
-
-	printf("Sinh vien dat diem: %c\n", rank);
 }
