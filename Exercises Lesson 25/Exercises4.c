@@ -12,13 +12,10 @@
 
 // hàm nhập mảng và n 
 void fillArr(float a[], int* n);
-
 // hàm nhập x và k
 void getKX(int n, float* x, int* k);
-
 // hàm chèn x:
 void insertXAtK(float a[], int n, float x, int k);
-
 // hàm hiển thị mảng
 void showArrElements(float a[], int n);
 
@@ -52,7 +49,7 @@ void getKX(int n, float* x, int* k) {
 	puts("\nNhap x: ");
 	scanf("%f", x);
 	while (1) {
-		printf("Nhap 0 <= k <= %d: ", n);
+		printf("Nhap 0 <= k < %d: ", n);
 		scanf("%d", k);
 		// nếu nhập đúng k thỏa mãn đk thì sẽ kết thúc vòng lặp
 		// không thì cứ đợi đấy!
