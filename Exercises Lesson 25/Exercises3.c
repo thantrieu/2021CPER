@@ -30,8 +30,8 @@ int main() {
 		puts("Mang goc: ");
 		// sắp xếp mảng
 		sortDESC(a, n);
-		// hiển thị mảng gồm n - 1 phần tử
-		showArrElements(a, n - 1);
+		// hiển thị mảng gồm n phần tử
+		showArrElements(a, n);
 
 		int x;
 		puts("\nNhap x: ");
