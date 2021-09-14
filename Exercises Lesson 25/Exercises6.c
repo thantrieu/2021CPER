@@ -12,10 +12,8 @@
 
 // hàm nhập mảng và n 
 void fillArr(int a[], int n);
-
 // hàm xóa các phần tử có giá trị bằng x:
 int removeXElements(int a[], int* n, int x);
-
 // hàm hiển thị mảng
 void showArrElements(int a[], int n);
 
