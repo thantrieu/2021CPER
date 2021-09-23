@@ -129,10 +129,11 @@ void listedPrimeNumbers(int a, int b) {
 void listedNPrime(int n) {
 	printf("\n%d so nguyen to dau tien: ", n);
 	int i = 2;
-	int count;
-	for (count = 0; count < n; count++) {
+	int count = 0;
+	for (; count < n; ) {
 		if (isPrime(i)) {
 			printf("%d ", i);
+			count++;
 		}
 		i++;
 	}
