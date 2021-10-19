@@ -1,16 +1,14 @@
-﻿// Nhập ngày sinh, tháng sinh dương lịch của một người
-// hiển thị kết quả cung hoàng đạo tương ứng
-#include <stdio.h>
-/*
+﻿/*
  * @author Branium Academy
+ * @version 2021.10
+ * @see https://braniumacademy.net
 */
+#include <stdio.h>
+
 int main() {
 	int day, month; // ngày sinh tháng sinh
-	puts("Nhap ngay sinh: ");
-	scanf("%d", &day); // đọc vào ngày sinh
-
-	puts("Nhap thang sinh: ");
-	scanf("%d", &month); // đọc vào tháng sinh
+	puts("Nhap ngay sinh, thang sinh cach nhau boi dau cach: ");
+	scanf("%d%d", &day, &month); // đọc vào ngày, tháng sinh
 
 	switch (month)
 	{
@@ -22,7 +20,7 @@ int main() {
 			puts("Bao Binh");
 		}
 		else {
-			puts("Ngay khong hop le");
+			puts("INVALID DAY");
 		}
 		break;
 	case 2:
@@ -33,7 +31,7 @@ int main() {
 			puts("Song Ngu");
 		}
 		else {
-			puts("Ngay khong hop le");
+			puts("INVALID DAY");
 		}
 		break;
 	case 3:
@@ -44,7 +42,7 @@ int main() {
 			puts("Bach Duong");
 		}
 		else {
-			puts("Ngay khong hop le");
+			puts("INVALID DAY");
 		}
 		break;
 	case 4:
@@ -55,7 +53,7 @@ int main() {
 			puts("Kim Nguu");
 		}
 		else {
-			puts("Ngay khong hop le");
+			puts("INVALID DAY");
 		}
 		break;
 	case 5:
@@ -66,7 +64,7 @@ int main() {
 			puts("Song Tu");
 		}
 		else {
-			puts("Ngay khong hop le");
+			puts("INVALID DAY");
 		}
 		break;
 	case 6:
@@ -77,7 +75,7 @@ int main() {
 			puts("Cu Giai");
 		}
 		else {
-			puts("Ngay khong hop le");
+			puts("INVALID DAY");
 		}
 		break;
 	case 7:
@@ -88,7 +86,7 @@ int main() {
 			puts("Su Tu");
 		}
 		else {
-			puts("Ngay khong hop le");
+			puts("INVALID DAY");
 		}
 		break;
 	case 8:
@@ -99,7 +97,7 @@ int main() {
 			puts("Xu Nu");
 		}
 		else {
-			puts("Ngay khong hop le");
+			puts("INVALID DAY");
 		}
 		break;
 	case 9:
@@ -110,7 +108,7 @@ int main() {
 			puts("Thien Binh");
 		}
 		else {
-			puts("Ngay khong hop le");
+			puts("INVALID DAY");
 		}
 		break;
 	case 10:
@@ -121,7 +119,7 @@ int main() {
 			puts("Bo Cap");
 		}
 		else {
-			puts("Ngay khong hop le");
+			puts("INVALID DAY");
 		}
 		break;
 	case 11:
@@ -132,7 +130,7 @@ int main() {
 			puts("Nhan Ma");
 		}
 		else {
-			puts("Ngay khong hop le");
+			puts("INVALID DAY");
 		}
 		break;
 	case 12:
@@ -143,11 +141,11 @@ int main() {
 			puts("Ma Ket");
 		}
 		else {
-			puts("Ngay khong hop le");
+			puts("INVALID DAY");
 		}
 		break;
 	default:
-		puts("Thang khong hop le. Vui long kiem tra lai.");
+		puts("INVALID MONTH");
 		break;
 	}
 }

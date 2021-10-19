@@ -1,9 +1,10 @@
-﻿// Nhập vào một kí tự a, b, c, d, f
-// hiển thị kết quả xếp loại học tập tương ứng
-#include <stdio.h>
-/*
+﻿/*
  * @author Branium Academy
+ * @version 2021.10
+ * @see https://braniumacademy.net
 */
+#include <stdio.h>
+
 int main() {
 	char rank;
 	puts("Nhap ki tu a, b, c, d, f: ");
@@ -13,26 +14,26 @@ int main() {
 	{
 	case 'a': // loại giỏi
 	case 'A':
-		printf("Gioi");
+		puts("Gioi");
 		break;
 	case 'b': // loại khá
 	case 'B':
-		printf("Kha");
+		puts("Kha");
 		break;
 	case 'c': // loại trung bình
 	case 'C':
-		printf("Trung binh");
+		puts("Trung binh");
 		break;
 	case 'd': // loại yếu
 	case 'D':
-		printf("Yeu");
+		puts("Yeu");
 		break;
 	case 'f': // trượt môn
 	case 'F':
-		printf("Liet");
+		puts("Liet");
 		break;
 	default:
-		puts("Sai tuy chon. Vui long kiem tra lai");
+		puts("INVALID");
 		break;
 	}
 }
