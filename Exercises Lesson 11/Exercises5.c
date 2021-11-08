@@ -1,22 +1,25 @@
-﻿// Nhập số nguyên dương n sau đó tính tổng S = 1 + 1/2^2 + ... + 1/n^2
-#include <stdio.h>
-/*
- * @author Branium Academy
-*/
-int main() {
-	int n;
-	puts("Nhap so tu nhien n > 0: ");
-	scanf("%d", &n);
+// @author: braniumacademy
+// @version: 2021.11
+// @see: https://braniumacademy.net
 
-	if (n > 0) { // nếu n duong thì mới thực hiện
-		float s = 0;
-		int i;
-		for (i = 1; i <= n; i++) {
-			s += (float)1 / (i * i); // cộng từng thành phần 1/i^2
-		}
-		printf("S = %f\n", s);
-	}
-	else {
-		puts("Vui long nhap so tu nhien n > 0");
-	}
+#include <stdio.h>
+
+int main() {
+    int t;
+    scanf("%d", &t);
+    for (int i = 1; i <= t; i++) {
+        int n;
+        scanf("%d", &n);
+        if(n <= 0) {
+            puts("INVALID");
+        } else {
+            double sum = 0.0;
+            for (int j = 1; j <= n; j++) {
+                sum += 1.0 / (j * j);
+            }
+            printf("%0.5lf", sum);
+        }
+    }
+    puts("");
+    return 0;
 }
