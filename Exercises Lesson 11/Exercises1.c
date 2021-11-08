@@ -1,16 +1,24 @@
-// Nhập số tự nhiên n sau đó hiển thị các số chẵn
-// trong đoạn [0, n]
+// @author: braniumacademy
+// @version: 2021.11
+// @see: https://braniumacademy.net
+
 #include <stdio.h>
-/*
- * @author Branium Academy
-*/
+
 int main() {
-	int n;
-	puts("Nhap n: ");
-	scanf("%d", &n);
-	printf("Cac so chan trong doan [0, %d]: ", n);
-	int i;
-	for (i = 0; i <= n; i += 2) {
-		printf("%d ", i);
-	}
+    int t;
+    scanf("%d", &t);
+    for (int i = 1; i <= t; i++) {
+        int n;
+        scanf("%d", &n);
+        if(n < 0) {
+            puts("NO RESULT");
+        } else {
+            for (int j = 0; j <= n; j++) {
+                if(j % 2 == 0) {
+                    printf("%d ", j);
+                }
+            }
+        }
+    }
+    printf("\n");
 }
