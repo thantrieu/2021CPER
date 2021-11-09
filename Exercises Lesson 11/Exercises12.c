@@ -1,3 +1,7 @@
+// @author: braniumacademy
+// @version: 2021.11
+// @see: https://braniumacademy.net
+
 #include <stdio.h>
 
 int main() {

@@ -11,8 +11,9 @@ int main() {
         int n, k;
         scanf("%d%d", &n, &k);
         if(n < 0 || k > n) {
-            puts("NO RESULT");
+            printf("Test %d:\nNO RESULT\n", i);
         } else {
+            printf("Test %d:\n", i);
             for (int j = k; j <= n; j++) {
                 if(j % 2 == 1) {
                     printf("%d ", j);
