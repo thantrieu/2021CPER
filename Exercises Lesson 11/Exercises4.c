@@ -15,9 +15,9 @@ int main() {
             for (int j = 1; j <= n; j++) {
                 sum += 1.0 / j;
             }
-            printf("%0.3lf\n", sum);
+            printf("Test %d:\n%0.3lf\n", i, sum);
         } else {
-            puts("INVALID");
+            printf("Test %d:\nINVALID\n", i);
         }
     }
     puts("");

@@ -11,13 +11,13 @@ int main() {
         int n;
         scanf("%d", &n);
         if(n <= 0) {
-            puts("INVALID");
+            printf("Test %d:\nINVALID\n", i);
         } else {
             double sum = 0.0;
             for (int j = 1; j <= n; j++) {
                 sum += 1.0 / (j * j);
             }
-            printf("%0.5lf", sum);
+            printf("Test %d:\n%0.5lf\n", i, sum);
         }
     }
     puts("");

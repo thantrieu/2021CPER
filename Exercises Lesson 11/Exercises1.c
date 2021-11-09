@@ -11,13 +11,15 @@ int main() {
         int n;
         scanf("%d", &n);
         if(n < 0) {
-            puts("NO RESULT");
+            printf("Test %d:\nNO RESULT", i);
         } else {
+            printf("Test %d: \n", i);
             for (int j = 0; j <= n; j++) {
                 if(j % 2 == 0) {
                     printf("%d ", j);
                 }
             }
+            printf("\n");
         }
     }
     printf("\n");
