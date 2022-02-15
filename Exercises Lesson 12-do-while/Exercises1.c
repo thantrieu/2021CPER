@@ -1,10 +1,11 @@
-﻿// Nhập vào hai số nguyên a, b. Tạo menu chọn thực hiện các chức năng
-// cộng trừ nhân chia, lấy dư và tính a mũ b
+﻿/*
+ * @author Branium Academy
+ * @version 2022.02.15
+ * @see https://braniumacademy.net
+*/
 #include <stdio.h>
 #include <math.h>
-/*
- * @author Branium Academy
-*/
+
 int main() {
 	int a, b;
 	puts("Nhap hai so nguyen a, b: ");

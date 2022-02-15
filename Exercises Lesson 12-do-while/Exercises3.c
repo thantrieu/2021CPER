@@ -1,9 +1,11 @@
-﻿// Nhập vào lựa chọn từ 1 - 12 và xuất ra tên tháng trong năm
-// tương ứng. Nhập 0 sẽ thoát chương trình
-#include <stdio.h>
-/*
+﻿/*
  * @author Branium Academy
+ * @version 2022.02.15
+ * @see https://braniumacademy.net
 */
+
+#include <stdio.h>
+
 int main() {
 	int choice; // lưu các lựa chọn
 	do {
