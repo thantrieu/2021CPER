@@ -1,9 +1,11 @@
-﻿// Nhập vào lựa chọn tiếp tục hoặc thoát. Nếu tiếp tục thì nhập
-// vào ngày sinh, tháng sinh và hiển thị ra cung hoàng đạo tương ứng
-#include <stdio.h>
-/*
+﻿/*
  * @author Branium Academy
+ * @version 2022.02.15
+ * @see https://braniumacademy.net
 */
+
+#include <stdio.h>
+
 int main() {
 	int choice; // lưu các lựa chọn
 	do {
