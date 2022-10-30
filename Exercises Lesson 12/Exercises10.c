@@ -13,13 +13,16 @@ int main() {
 	int counter = 1;
 	while (t > 0) {
 		scanf("%d", &n);
+		if(n < 0) {
+			n *= -1;
+		}
 		int other = 0;
 		int tmp = n;
 		while (tmp > 0) {
 			other = other * 10 + tmp % 10;
 			tmp /= 10;
 		}
-		if (n == other) {
+		if (n > 9 && n == other) {
 			printf("Test %d: YES\n", counter);
 		}
 		else {

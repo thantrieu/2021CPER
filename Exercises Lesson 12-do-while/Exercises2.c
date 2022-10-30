@@ -15,7 +15,7 @@ int main() {
 		switch (choice)
 		{
 		case 0:
-			puts("Xin chao va hen gap lai");
+			puts("==> Chuong trinh ket thuc.");
 			break;
 		case 1: // thứ hai
 			printf("Monday");
@@ -39,7 +39,7 @@ int main() {
 			printf("Sunday");
 			break;
 		default:
-			puts("Gia tri khong hop le. Vui long kiem tra lai");
+			puts("Gia tri khong hop le. Vui long kiem tra lai!");
 			break;
 		}
 		puts("\n==============================");
