@@ -1,9 +1,17 @@
-﻿// Tìm ước chung lớn nhất và bội chung nhỏ nhất của
-// hai số nguyên dương nhập vào từ bàn phím
-#include <stdio.h>
-/*
+﻿/**
+ * @file Exercises15.c
  * @author Branium Academy
-*/
+ * @brief 
+ * @version 2.0
+ * @date 2022-10-30
+ * @see https://braniumacademy.net
+ * 
+ * @copyright Copyright (c) Branium Academy 2022
+ * 
+ */
+
+#include <stdio.h>
+
 int main() {
 	int a, b;
 	puts("Nhap hai so nguyen duong a, b: ");
