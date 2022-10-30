@@ -1,18 +1,26 @@
-/*
+/**
+ * @file Exercises15.c
  * @author Branium Academy
- * @version 2022.02.15
+ * @brief 
+ * @version 2.0
+ * @date 2022-10-30
  * @see https://braniumacademy.net
-*/
+ * 
+ * @copyright Copyright (c) Branium Academy 2022
+ * 
+ */
 
 #include <stdio.h>
 
 int main() {
 	int month = 0; // khởi tạo tháng bắt đầu bằng 0
 	do {
+		puts("Nhap vao thang cua nam(1-12).\nNhap 0 de thoat:");
 		scanf("%d", &month); // đọc vào tháng ở dạng số
 		switch (month) // chia trường hợp
 		{
 		case 0: // thoát chương trình
+			puts("==> Chuong trinh ket thuc.");
 			break;
 		case 1:
 			puts("January");
