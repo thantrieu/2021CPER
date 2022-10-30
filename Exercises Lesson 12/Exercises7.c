@@ -1,4 +1,4 @@
-﻿/*
+/*
  * @author Branium Academy
  * @version 2022.02.15
  * @see https://braniumacademy.net

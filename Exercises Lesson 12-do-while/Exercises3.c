@@ -15,7 +15,7 @@ int main() {
 		switch (choice)
 		{
 		case 0:
-			puts("Xin chao va hen gap lai");
+			puts("==> Chuong trinh ket thuc.");
 			break;
 		case 1: // tháng 1
 			printf("January");
@@ -54,7 +54,7 @@ int main() {
 			printf("December");
 			break;
 		default:
-			puts("Thang khong hop le. Vui long kiem tra lai");
+			puts("Thang khong hop le. Vui long kiem tra lai.");
 			break;
 		}
 		puts("\n==============================");

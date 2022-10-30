@@ -15,6 +15,9 @@ int main() {
 		if (a > b || k > b) {
 			printf("\n"); // không có kết quả
 		}
+		else if(k == 0) {
+			printf("ERROR\n");
+		}
 		else {
 			int i = a;
 			while (i <= b) {

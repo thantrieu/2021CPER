@@ -9,9 +9,11 @@
 
 int main() {
 	int t, a, b;
+	int testIndex = 1;
 	scanf("%d", &t);
-	while (t > 0) {
+	while (testIndex <= t) {
 		scanf("%d%d", &a, &b);
+		printf("Test %d:\n", testIndex);
 		if (a > b) {
 			printf("\n");
 		}
@@ -35,6 +37,6 @@ int main() {
 			}
 			printf("\n");
 		}
-		t--;
+		testIndex++;
 	}
 }
