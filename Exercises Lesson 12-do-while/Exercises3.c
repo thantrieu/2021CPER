@@ -1,9 +1,11 @@
-﻿// Nhập vào lựa chọn từ 1 - 12 và xuất ra tên tháng trong năm
-// tương ứng. Nhập 0 sẽ thoát chương trình
-#include <stdio.h>
-/*
+﻿/*
  * @author Branium Academy
+ * @version 2022.02.15
+ * @see https://braniumacademy.net
 */
+
+#include <stdio.h>
+
 int main() {
 	int choice; // lưu các lựa chọn
 	do {
@@ -13,7 +15,7 @@ int main() {
 		switch (choice)
 		{
 		case 0:
-			puts("Xin chao va hen gap lai");
+			puts("==> Chuong trinh ket thuc.");
 			break;
 		case 1: // tháng 1
 			printf("January");
@@ -52,7 +54,7 @@ int main() {
 			printf("December");
 			break;
 		default:
-			puts("Thang khong hop le. Vui long kiem tra lai");
+			puts("Thang khong hop le. Vui long kiem tra lai.");
 			break;
 		}
 		puts("\n==============================");

@@ -1,9 +1,11 @@
-﻿// Nhập vào lựa chọn từ 1 - 7 và xuất ra tên ngày của tuần
-// tương ứng. Nhập 0 sẽ thoát chương trình
-#include <stdio.h>
-/*
+﻿/*
  * @author Branium Academy
+ * @version 2022.02.15
+ * @see https://braniumacademy.net
 */
+
+#include <stdio.h>
+
 int main() {
 	int choice; // lưu các lựa chọn
 	do {
@@ -13,7 +15,7 @@ int main() {
 		switch (choice)
 		{
 		case 0:
-			puts("Xin chao va hen gap lai");
+			puts("==> Chuong trinh ket thuc.");
 			break;
 		case 1: // thứ hai
 			printf("Monday");
@@ -37,7 +39,7 @@ int main() {
 			printf("Sunday");
 			break;
 		default:
-			puts("Gia tri khong hop le. Vui long kiem tra lai");
+			puts("Gia tri khong hop le. Vui long kiem tra lai!");
 			break;
 		}
 		puts("\n==============================");

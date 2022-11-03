@@ -1,10 +1,11 @@
-﻿// Nhập vào hai số nguyên a, b. Tạo menu chọn thực hiện các chức năng
-// cộng trừ nhân chia, lấy dư và tính a mũ b
+﻿/*
+ * @author Branium Academy
+ * @version 2022.02.15
+ * @see https://braniumacademy.net
+*/
 #include <stdio.h>
 #include <math.h>
-/*
- * @author Branium Academy
-*/
+
 int main() {
 	int a, b;
 	puts("Nhap hai so nguyen a, b: ");
@@ -18,14 +19,14 @@ int main() {
 		puts("3. Nhan a voi b");
 		puts("4. Chia a cho b");
 		puts("5. Chia lay du a cho b");
-		puts("6. Tinh a^b, b >= 0");
+		puts("6. Tinh a^b");
 		puts("0. Thoat");
 		scanf("%d", &choice);
 
 		switch (choice)
 		{
 		case 0:
-			puts("Xin chao va hen gap lai");
+			puts("==> Ket thuc chuong trinh.");
 			break;
 		case 1: // thực hiện phép cộng
 			printf("%d + %d = %d\n", a, b, a + b);
@@ -54,10 +55,10 @@ int main() {
 			break;
 		case 6:
 			// ép kiểu sang int
-			printf("%d^%d = %d\n", a, b, (int)pow(a, b));
+			printf("%d^%d = %0.2f\n", a, b, pow(a, b));
 			break;
 		default:
-			puts("Sai chuc nang. Vui long kiem tra lai");
+			puts("Sai chuc nang. Vui long kiem tra lai!");
 			break;
 		}
 		puts("\n==============================");

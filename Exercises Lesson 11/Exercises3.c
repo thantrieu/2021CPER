@@ -1,22 +1,25 @@
-﻿// Nhập số tự nhiên n sau đó tính tổng S = 1 + 2 + ... + n
+// @author: braniumacademy
+// @version: 2021.11
+// @see: https://braniumacademy.net
+
 #include <stdio.h>
-/*
- * @author Branium Academy
-*/
+
 int main() {
-	int n;
-	puts("Nhap so tu nhien n > 0: ");
-	scanf("%d", &n);
-	
-	int s = 0;
-	if (n < 0) {
-		puts("Vui long nhap so nguyen duong n ");
-	}
-	else {
-		int i;
-		for (i = 1; i <= n; i++) {
-			s += i; // cộng thêm i vào tổng
-		}
-		printf("S = %d\n", s);
-	}
+    int t;
+    scanf("%d", &t);
+    for (int i = 1; i <= t; i++) {
+        int n;
+        scanf("%d", &n);
+        if(n <= 0) {
+            printf("Test %d:\nINVALID\n", i);
+        } else {
+            long sum = 0;
+            for (int j = 1; j <= n; j++) {
+                sum += j;
+            }
+            printf("Test %d:\n%ld\n", i, sum);
+        }
+    }
+    printf("\n");
+    return 0;
 }

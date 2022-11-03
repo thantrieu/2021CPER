@@ -20,9 +20,9 @@ int main() {
 	// kết luận
 	// nếu ba số bằng nhau, không có giá trị min
 	if (a == b && b == c) {
-		puts("Khong co gia tri nho nhat");
+		puts("NO RESULT");
 	}
 	else {
-		printf("Gia tri nho nhat trong ba so la: %d\n", min);
+		printf("%d\n", min);
 	}
 }

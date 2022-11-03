@@ -1,22 +1,25 @@
-﻿// Nhập số nguyên dương n sau đó tính tổng S = 1 + 1/2 + ... + 1/n
-#include <stdio.h>
-/*
- * @author Branium Academy
-*/
-int main() {
-	int n;
-	puts("Nhap so nguyen n > 0: ");
-	scanf("%d", &n);
+// @author: braniumacademy
+// @version: 2021.11
+// @see: https://braniumacademy.net
 
-	float s = 0;
-	if (n > 0) {
-		int i;
-		for (i = 1; i <= n; i++) {
-			s += (float)1 / i; // cộng thêm 1/i
-		}
-		printf("S = %f\n", s);
-	}
-	else {
-		puts("Vui long nhap so nguyen duong n > 0.");
-	}
+#include <stdio.h>
+
+int main() {
+    int t;
+    scanf("%d", &t);
+    for (int i = 1; i <= t; i++) {
+        int n;
+        scanf("%d", &n);
+        if(n > 0) {
+            double sum = 0.0;
+            for (int j = 1; j <= n; j++) {
+                sum += 1.0 / j;
+            }
+            printf("Test %d:\n%0.3lf\n", i, sum);
+        } else {
+            printf("Test %d:\nINVALID\n", i);
+        }
+    }
+    puts("");
+    return 0;
 }

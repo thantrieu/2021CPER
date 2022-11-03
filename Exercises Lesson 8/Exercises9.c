@@ -14,13 +14,13 @@ int main() {
 	if ((a + b > c) && (b + c > a) && (a + c > b)) {
 		// điều kiện tạo tam giác vuông
 		if (a * a + b * b == c * c || a * a + c * c == b * b || b * b + c * c == a * a) {
-			puts("Tao thanh tam giac vuong");
+			puts("YES");
 		}
 		else { // không thỏa mãn
-			puts("Khong tao tam giac vuong");
+			puts("NO");
 		}
 	}
 	else {
-		puts("Khong lap thanh ba canh tam giac.");
+		puts("NO");
 	}
 }

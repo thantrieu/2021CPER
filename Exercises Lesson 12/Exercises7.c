@@ -1,25 +1,38 @@
-﻿// Nhập số nguyên dương n và tính tổng S = 1 + 1/2^3 + ... + 1/n^3
-#include <stdio.h>
-/*
+/**
+ * @file Exercises15.c
  * @author Branium Academy
-*/
-int main() {
-	int n;
-	puts("Nhap so nguyen 0 <= n <= 23: ");
-	scanf("%d", &n);
+ * @brief 
+ * @version 2.0
+ * @date 2022-10-30
+ * @see https://braniumacademy.net
+ * 
+ * @copyright Copyright (c) Branium Academy 2022
+ * 
+ */
 
-	if (n <= 0) {
-		puts("Vui long nhap so nguyen duong n");
-	}
-	else {
-		float sum = 0;
-		int i = 1;
-		while (i <= n) { // thực hiện chừng nào i <= n
-			// nhớ ép kiểu sang float
-			sum += (float)1 / (i * i * i); // cộng thêm i^3
-			i++;
+#include <stdio.h>
+
+int main() {
+	int t, n;
+	scanf("%d", &t);
+	int counter = 1;
+	while (t > 0) {
+		scanf("%d", &n);
+		if (n <= 0) {
+			printf("Test %d:\nERROR\n", counter);
 		}
-		// lúc này ta đã có kết quả:
-		printf("S = %f\n", sum);
+		else {
+			float sum = 0;
+			int i = 1;
+			while (i <= n) { // thực hiện chừng nào i <= n
+				// nhớ ép kiểu sang float
+				sum += (float)1 / (i * i * i); // cộng thêm i^3
+				i++;
+			}
+			// lúc này ta đã có kết quả:
+			printf("Test %d:\n%0.3f\n", counter, sum); // làm tròn đến 3 chữ số sau dấu phẩy
+		}
+		t--;
+		counter++;
 	}
 }

@@ -12,13 +12,10 @@
 
 // hàm nhập mảng và n 
 void fillArr(float a[], int* n);
-
 // hàm nhập x và k
 void getK(int n, int* k);
-
 // hàm xóa phần tử tại vị trí k:
 void removeElementAtK(float a[], int* n, int k);
-
 // hàm hiển thị mảng
 void showArrElements(float a[], int n);
 
@@ -49,7 +46,7 @@ int main() {
 
 void getK(int n, int* k) {
 	while (1) {
-		printf("\nNhap 0 <= k <= %d: ", n);
+		printf("\nNhap 0 <= k < %d: ", n);
 		scanf("%d", k);
 		// nếu nhập đúng k thỏa mãn đk thì sẽ kết thúc vòng lặp
 		// không thì cứ đợi đấy!

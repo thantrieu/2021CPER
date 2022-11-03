@@ -10,13 +10,13 @@ int main() {
 	scanf("%d%d", &a, &b);
 	// kiểm tra
 	if (a == b) { // hai số bằng nhau
-		puts("Hai so bang nhau");
+		puts("EQUAL\n");
 	}
 	else { // hai số khác nhau
 		int dif = a - b; // lấy độ chênh lệch
 		if (dif < 0) { // nếu là số âm
 			dif = -dif; // đổi dấu
 		}
-		printf("Hai so khac nhau %d don vi.\n", dif);
+		printf("DIFFERENT %d.\n", dif);
 	}
 }

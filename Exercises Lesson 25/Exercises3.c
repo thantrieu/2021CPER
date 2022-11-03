@@ -1,4 +1,4 @@
-﻿// Cho mảng nguyên gồm n phần tử. Viết chương trình thực hiện các chức năng:
+﻿// Cho mảng nguyên gồm n + 1 phần tử. Viết chương trình thực hiện các chức năng:
 // nhập vào số n và n phần tử của mảng
 // sắp xếp các phần tử của mảng theo thứ tự giảm dần
 // nhập x và chèn x vào mảng sao cho vẫn giữ nguyên tính chất sắp xếp
@@ -12,13 +12,10 @@
 
 // hàm nhập mảng và n 
 void fillArr(int a[], int* n);
-
 // hàm sắp xếp mảng
 void sortDESC(int a[], int n);
-
 // hàm chèn x:
-void insertX(int a[], int n, int x);
-
+void insertX(int a[], int* n, int x);
 // hàm hiển thị mảng
 void showArrElements(int a[], int n);
 
@@ -26,20 +23,20 @@ void showArrElements(int a[], int n);
 int main() {
 	// khai báo biến
 	int n;
-	int a[100];
+	int a[300]; // tối đa 300 phần tử
 	// nhập mảng
 	fillArr(a, &n);
 	if (n > 0) {
 		puts("Mang goc: ");
 		// sắp xếp mảng
 		sortDESC(a, n);
-		// hiển thị mảng gồm n - 1 phần tử
-		showArrElements(a, n - 1);
+		// hiển thị mảng gồm n phần tử
+		showArrElements(a, n);
 
 		int x;
 		puts("\nNhap x: ");
 		scanf("%d", &x);
-		insertX(a, n, x);
+		insertX(a, &n, x);
 		puts("\nMang sau khi chen x: ");
 		showArrElements(a, n);
 		puts("");
@@ -55,7 +52,7 @@ void fillArr(int a[], int* n) {
 	puts("Nhap n: ");
 	scanf("%d", n);
 	int i;
-	for (i = 0; i < *n - 1; i++) {
+	for (i = 0; i < *n; i++) {
 		printf("a[%d] = ", i);
 		scanf("%d", &a[i]);
 	}
@@ -86,18 +83,23 @@ void swap(int* a, int* b) {
 	*b = tmp;
 }
 
-void insertX(int a[], int n, int x) {
+void insertX(int a[], int* n, int x) {
 	int indexToInsert(int a[], int n, int x);
-	int index = indexToInsert(a, n, x);
+	int index = indexToInsert(a, *n, x);
 	// nếu nhỏ hơn tất cả các phần tử, chèn ở cuối mảng
-	a[n - 1] = x;
-	// ngược lại dồn tất cả các phần tử từ vị trí index sang phải 1 đơn vị
-	int i;
-	for (i = n - 1; i > index; i--) {
-		a[i] = a[i - 1];
+	if (index == -1) {
+		a[*n] = x;
 	}
-	// chèn x vào vị trí index
-	a[index] = x;
+	// ngược lại dồn tất cả các phần tử từ vị trí index sang phải 1 đơn vị
+	else {
+		int i;
+		for (i = *n; i > index; i--) {
+			a[i] = a[i - 1];
+		}
+		// chèn x vào vị trí index
+		a[index] = x;
+	}
+	(*n)++;
 }
 
 int indexToInsert(int a[], int n, int x) {

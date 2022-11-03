@@ -20,9 +20,9 @@ int main() {
 	// kết luận
 	// nếu ba số bằng nhau, không có giá trị max
 	if (a == b && b == c) {
-		puts("Khong co gia tri lon nhat");
+		puts("NO RESULT\n");
 	}
 	else {
-		printf("Gia tri lon nhat trong ba so la: %d\n", max);
+		printf("%d\n", max);
 	}
 }

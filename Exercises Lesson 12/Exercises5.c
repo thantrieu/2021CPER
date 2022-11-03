@@ -1,22 +1,35 @@
-﻿// Nhập số nguyên 0 <= n <= 23 và tính n!
-#include <stdio.h>
-/*
+﻿/**
+ * @file Exercises15.c
  * @author Branium Academy
-*/
+ * @brief 
+ * @version 2.0
+ * @date 2022-10-30
+ * @see https://braniumacademy.net
+ * 
+ * @copyright Copyright (c) Branium Academy 2022
+ * 
+ */
+
+#include <stdio.h>
+
 int main() {
-	int n;
-	puts("Nhap so nguyen 0 <= n <= 23: ");
-	scanf("%d", &n);
-	if (n < 0 || n > 23) {
-		puts("Vui long nhap 0 <= n <= 23");
-	}
-	else {
-		unsigned long long factorial = 1;
-		int i = 2;
-		while (i <= n) {
-			factorial *= i;
-			i++;
+	int t; // số bộ test
+	int n; // số n cần tính n!
+	scanf("%d", &t);
+	while (t > 0) {
+		scanf("%d", &n); // đọc vào số n
+		if (n < 0 || n > 23) { // n không hợp lệ
+			puts("ERROR");
 		}
-		printf("%d!= %llu\n", n, factorial);
+		else { // n hợp lệ
+			unsigned long long factorial = 1;
+			int i = 2;
+			while (i <= n) { // tính n!
+				factorial *= i;
+				i++;
+			}
+			printf("%llu\n", factorial); // hiển thị kết quả
+		}
+		t--;
 	}
 }

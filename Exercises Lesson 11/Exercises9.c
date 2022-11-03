@@ -1,33 +1,29 @@
-﻿// Nhập số nguyên dương n sau đó kiểm tra xem
-// n có phải số thuận nghịch hay không
 #include <stdio.h>
-/*
- * @author Branium Academy
-*/
-int main() {
-	int n;
-	puts("Nhap so nguyen n > 0: ");
-	scanf("%d", &n);
 
-	if (n < 0) {
-		puts("Vui long nhap so nguyen n > 0");
-	}
-	else {
-		// khai báo biến lưu giá trị đảo của n
-		int revert = 0;
-		int m = n; // lưu lại giá trị gốc của n để lấy số đảo
-		// thực hiện đảo giá trị của n
-		while (m > 0) {
-			// tách lấy phần đơn vị của m và gộp vào số đảo
-			revert = revert * 10 + m % 10;
-			m /= 10; // giảm m đi 10 lần
-		}
-		// bây giờ ta có giá trị đảo của n, 
-		if (revert == n) {
-			printf("%d la so thuan nghich\n", n);
-		}
-		else {
-			printf("%d khong phai so thuan nghich\n", n);
-		}
-	}
+// 0     1234
+// 4     123
+// 43    12
+// 432   1
+// 4321  0
+
+int main() {
+    int t;
+    scanf("%d", &t);
+    for (int i = 1; i <= t; i++) {
+        int n;
+        scanf("%d", &n);
+        if(n < 0) {
+            n *= -1;
+        }
+        int reverse = 0;
+        for (int j = n; j > 0; j /= 10) {
+            reverse = reverse * 10 + j % 10;
+        }
+        if(n == reverse) {
+            printf("Test %d: YES\n", i);
+        } else {
+            printf("Test %d: NO\n", i);
+        }
+    }
+    return 0;
 }
