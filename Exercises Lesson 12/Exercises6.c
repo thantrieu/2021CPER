@@ -1,4 +1,4 @@
-﻿/**
+/**
  * @file Exercises15.c
  * @author Branium Academy
  * @brief 
@@ -11,6 +11,7 @@
  */
 
 #include <stdio.h>
+#include <math.h>
 
 int main() {
 	int t; // số lượng bộ test
@@ -22,20 +23,26 @@ int main() {
 			puts("NO");
 		}
 		else {
-			// số nguyên tố cùng nhau là cặp số có ước chung lớn nhất
-			// bằng 1
-			// tìm ước chung lớn nhất của hai số a, b
-			while (a != b) {
-				if (a > b) {
-					a -= b;
+			int counter1 = 0;
+			int counter2 = 0;
+			int i = 2;
+			// đếm ước khác 1 và chính số a của số a
+			while (i < a) {
+				if (a % i == 0) {
+					counter1++;
 				}
-				else {
-					b -= a;
-				}
+				i++;
 			}
-			// lúc này a = b nên ta kiểm tra a hoặc b đều ok
-
-			if (a == 1) {
+			// đếm ước khác 1 và chính số b của số b
+			i = 2;
+			while (i < b) {
+				if (b % i == 0) {
+					counter2++;
+				}
+				i++;
+			}
+			// nếu số ước khác 1 và chính a, b là 0 thì cặp số là nguyên tố
+			if (counter2 == counter1 && counter1 == 0) {
 				puts("YES");
 			}
 			else {
