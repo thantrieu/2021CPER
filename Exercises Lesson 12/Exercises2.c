@@ -1,12 +1,12 @@
 ﻿/**
- * @file Exercises15.c
+ * @file Exercises2.c
  * @author Branium Academy
  * @brief 
- * @version 2.0
- * @date 2022-10-30
+ * @version 3.0
+ * @date 2023-01-15
  * @see https://braniumacademy.net
  * 
- * @copyright Copyright (c) Branium Academy 2022
+ * @copyright Copyright (c) Branium Academy 2023
  * 
  */
 
@@ -19,6 +19,9 @@ int main() {
 	int counter = 1; // bắt đầu đếm số bộ test
 	while (t > 0) { // lặp t lần
 		scanf("%d", &n); // đọc vào số n
+		if (n < 0) {
+            n = -n; // lấy trị tuyệt đối của n
+        }
 		int sum = 0; // khởi tạo biến tổng bằng 0
 		while (n > 0) { // lặp chừng nào n còn > 0
 			int digit = n % 10; // tách phần đơn vị 
