@@ -100,7 +100,7 @@ int main() {
 			scanf("%s", name);
 			searchByName(students, n, result, &numberOfResult, name);
 			if (numberOfResult > 0) {
-				showListStudents(students, n);
+				showListStudents(students, numberOfResult);
 			}
 			else {
 				printf("--> Khong tim thay hoc sinh co ten \"%s\" <--\n",
