@@ -16,8 +16,8 @@ int main() {
 	scanf("%ld", &n);
 
 	if (n > 0) {
-		double s = sum(n);
-		printf("S = %lf\n", s);
+		float s = sum(n);
+		printf("%1.3f\n", s);
 	}
 	else {
 		puts("Nhap n > 0");

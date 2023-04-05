@@ -1,16 +1,17 @@
 ﻿/**
- * @file Exercises15.c
+ * @file Exercises6.c
  * @author Branium Academy
  * @brief 
- * @version 2.0
- * @date 2022-10-30
+ * @version 3.0
+ * @date 2023-01-15
  * @see https://braniumacademy.net
  * 
- * @copyright Copyright (c) Branium Academy 2022
+ * @copyright Copyright (c) Branium Academy 2023
  * 
  */
 
 #include <stdio.h>
+#include <math.h>
 
 int main() {
 	int t; // số lượng bộ test

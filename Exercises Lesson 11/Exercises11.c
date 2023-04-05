@@ -1,5 +1,5 @@
 // @author: braniumacademy
-// @version: 2021.11
+// @version: 2023.04
 // @see: https://braniumacademy.net
 
 #include <stdio.h>
@@ -18,7 +18,7 @@ int main() {
         if(n < 0) {
             printf("Test %d:\nINVALID\n", i);
         } else {
-            long product = 1;
+            long product = (n == 0) ? 0 : 1;
             for (int j = n; j > 0; j /= 10) {
                 product *= j % 10;
             }

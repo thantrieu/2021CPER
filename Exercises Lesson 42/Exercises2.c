@@ -100,7 +100,7 @@ int main() {
 			scanf("%s", name);
 			searchByName(students, n, result, &numberOfResult, name);
 			if (numberOfResult > 0) {
-				showListStudents(students, n);
+				showListStudents(students, numberOfResult);
 			}
 			else {
 				printf("--> Khong tim thay hoc sinh co ten \"%s\" <--\n",
@@ -247,4 +247,8 @@ void getStudentInfo(struct student* s) {
 	scanf("%*c%19[^\n]", s->phoneNumber);
 	puts("Diem TB: ");
 	scanf("%f", &s->avgGrade);
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> d67727483bcf14e30cfd1ab98f1148923fdf3500
